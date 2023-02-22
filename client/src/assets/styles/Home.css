@@ -1,0 +1,121 @@
+
+
+.back-circle{
+    width:800px;
+    height:800px;
+    border-radius: 55%;
+    /* opacity:0.4; */
+    position: absolute;
+}
+.red-back-circle{
+    background: rgba(247, 157, 157, 0.66);
+    top:-80px;
+    right:-190px;
+    z-index: -8;
+}
+.blue-back-circle{
+    background: rgba(157, 225, 247, 0.54);
+    top:-120px;
+    right:-170px;
+    z-index:-9
+}
+
+.home-back{
+    width:800px;
+    height:800px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url('../images/hback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    top:-100px;
+    right:-200px;
+    z-index: -8;
+}
+
+.home-content{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    padding:0px 70px;
+}
+
+
+.home-content h1{
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.home-content p{
+    margin:20px auto
+}
+
+.join{
+    display: flex;
+    align-items: center;
+    margin: 20px auto 10px auto;
+}
+
+.join h4{
+    color: gray;
+}
+
+.lines{
+    background-color: grey;
+    width:60px;
+    height: 2px;
+    margin:0px 10px
+}
+
+.home-buttons{
+    margin:30px auto;
+}
+
+.home-button{
+    background:rgb(5,247,85);
+            background: linear-gradient(50deg, rgba(5,247,85,1) 0%, rgba(0,255,179,1) 100%);
+            font-size:20px;
+            padding:10px 40px;
+}
+
+
+@media only screen and (max-width:1300px){
+    .back-circle, .home-back{
+        display: none;
+    }
+    .home-content{
+        width:90%;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    .home-content{
+        margin: auto;
+        margin-top: 50px;
+        text-align: center;  
+    }
+
+}
+
+@media only screen and (max-width:720px){
+    .home-content{
+        padding:0px;
+    }
+    .home-content h1{
+        font-size: 40px;
+        padding: 0px;
+    }
+    .home-buttons{
+        padding:5px 10px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:560px){
+    .home-content h1{
+        font-size: 40px;
+        padding: 0px;
+    }
+}

@@ -42,6 +42,10 @@ const candid_schema = new mongoose.Schema({
         type:String,
         required:true
     },
+    profile_views:{
+        type:Number,
+        default:0
+    },
     user_id:{
         type:mongoose.SchemaTypes.ObjectId,
         ref:'User'

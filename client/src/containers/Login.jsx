@@ -5,7 +5,7 @@ import { Button, TextField } from '@mui/material'
 import AuthInputs from '../components/AtuhInputs'
 import AuthPasswordInputs from '../components/AuthPasswordInput'
 import { Link } from 'react-router-dom'
-import { useFormik, Form } from 'formik'
+import { useFormik } from 'formik'
 import * as yup from 'yup';
 import SmallButton from '../components/custom-mui-comp/Button';
 import { login } from '../redux/auth/action';
