@@ -4,7 +4,10 @@ import {
   LOGIN_ERROR,
   OTP_REQUEST,
   OTP_SUCCESS,
-  OTP_ERROR
+  OTP_ERROR,
+  SEND_EMAIL_REQUEST,
+  SEND_EMAIL_SUCCESS,
+  SEND_EMAIL_ERROR
 
 } from "./constants";
 import { loading_false, loading_true } from "../general/action";
@@ -123,7 +126,19 @@ const authReducer = (state = initial, action) => {
       toast.dismiss()
       toastId = toast.error('Error Sending OTP!')
       return state
-    
+    case SEND_EMAIL_REQUEST:
+      toast.dismiss();
+      toastId = toast.success("Emial Send Successfully!");
+      return state;
+    case SEND_EMAIL_SUCCESS:
+      toast.dismiss();
+      toastId=toast.success("Check your mail for OTP!");
+      return state;
+    case SEND_EMAIL_ERROR:
+      toast.dismiss();
+      toastId = toast.success(action.err.response.data.message)
+      return {...state,error: action.err.response.data.message}
+      
       default:
       return state;
   }

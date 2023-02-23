@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@emotion/react';
 import theme from './theme';
@@ -16,6 +15,8 @@ import PrivateRoutes, { CandidateRoutes, EmployerRoutes } from './PrivateRoutes/
 import Packages from './containers/Employer/Packages';
 import FreeTrial from './containers/Employer/FreeTrial';
 import ComingSoon from './components/ComingSoon';
+import Email from  './containers/Candidate/resetEmail';
+import ResetPassword from './containers/Candidate/resetPassword';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
               <Route exact path='/' element={<Home />} />
               <Route exact path='/login' element={<Login />} />
               <Route exact path='/signup' element={<Signup />} />
+              <Route exact path='/candidate/email' element={<Email />} />
+              <Route exact path='/candidate/reset-password' element={<ResetPassword />} />
+
             </Route>
             <Route path='/' element={<PrivateRoutes />} >
               <Route path='/' element={<CandidateRoutes />}>

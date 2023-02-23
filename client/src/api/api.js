@@ -76,3 +76,13 @@ export const set_pricing = (data) => {
         const toastId = toast.error('Prcing Update failed!')
     }
 }
+
+export const send_email = (data) => {
+    let config = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    const body =JSON.stringify(data)
+    return axios.post(`${HOST_API}/reset-password-get-email`,body, config)
+}

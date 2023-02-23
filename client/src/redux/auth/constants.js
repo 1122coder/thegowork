@@ -15,3 +15,7 @@ export const LOGIN_ERROR = "LOGIN_ERROR";
 export const OTP_REQUEST = "OTP_REQUEST";
 export const OTP_SUCCESS = "OTP_SUCCESS";
 export const OTP_ERROR = "OTP_ERROR";
+
+export const SEND_EMAIL_REQUEST = 'SEND_EMAIL_REQUEST';
+export const SEND_EMAIL_SUCCESS = 'SEND_EMAIL_SUCCESS';
+export const SEND_EMAIL_ERROR = 'SEND_EMAIL_ERROR';
